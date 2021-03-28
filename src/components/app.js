@@ -7,7 +7,15 @@ const App = () => {
     const [inputText, setInputText] = useState("");
 
     useEffect(() => {
-        setTexts((comments) => [...comments, inputText]);
+        setTexts((comments) => [...comments, {newtext : inputText, author : 'author'}]);
+    }, [flag]);
+
+    useEffect(() => {
+        if(texts.length % 2 === 1) {
+            setTimeout(() => {
+                setTexts((comments) => [...comments, {newtext : 'отстань от меня, я робот', author : 'робот'}]);
+            },1000);
+        }
     }, [flag]);
 
     const onClick = () => {
