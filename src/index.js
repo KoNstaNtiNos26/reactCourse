@@ -1,4 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./components/app";
-ReactDOM.render(<App />, document.getElementById("root"));
+import CurrentChat from "./components/currentChat";
+import Layout from "./components/layout";
+ReactDOM.render(<Layout />, document.getElementById("root"));
