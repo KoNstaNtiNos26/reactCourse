@@ -12,7 +12,10 @@ module.exports = {
        path: path.resolve(__dirname, "static", "build"),
        filename: 'main.js',
    },
-    module: {
+   devServer: {
+    historyApiFallback: true,
+   },
+   module: {
         rules: [
         {
             test: /.(js|jsx)$/,
