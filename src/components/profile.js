@@ -1,4 +1,7 @@
 import React from "react";
-
-const Profile = () => {return <div>Hi, this is your profile!</div>};
+import {useSelector} from "react-redux";
+const Profile = () => {
+    const profileName = useSelector(state => state.profile.name);
+    return (<div>Hi {profileName}, this is your profile!</div>);
+};
 export default Profile;
